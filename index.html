@@ -5,110 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catarina Ferreira - Nutricionista</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 20px;
+            font-family: 'Futura LT W01 Light', 'Futura LT W05 Light', Arial, sans-serif;
             background: linear-gradient(135deg, #4a90e2, #357abd);
-            color: white;
-            text-align: center;
+            color: #333;
             line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
         }
-        .container {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.1);
+        .container { max-width: 800px; margin: 0 auto; }
+        .section {
+            background: rgba(255,255,255,0.95);
+            margin-bottom: 40px;
             padding: 40px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-        .logo {
-            width: 120px;
-            margin-bottom: 20px;
-        }
-        .foto {
-            width: 220px;
-            height: 220px;
+        .logo { width: 150px; display: block; margin: 0 auto 30px; }
+        .foto-principal {
+            width: 250px; height: 250px;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid white;
-            margin: 20px 0;
+            display: block;
+            margin: 0 auto 30px;
+            border: 8px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         h1 {
-            font-size: 2.8em;
-            margin: 0 0 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-family: 'Futura LT W01 Book', 'Futura LT W05 Book', Arial, sans-serif;
+            font-size: 3.5em;
+            text-align: center;
+            color: #2c5aa0;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(255,255,255,0.8);
         }
-        .tagline {
-            font-size: 1.4em;
-            margin-bottom: 30px;
-            opacity: 0.95;
+        h2 {
+            font-family: 'Futura LT W01 Book', Arial, sans-serif;
+            font-size: 2.2em;
+            color: #4a90e2;
+            margin: 30px 0 20px;
+            text-align: center;
         }
         .precos {
-            background: rgba(255,255,255,0.25);
-            padding: 25px;
+            background: linear-gradient(135deg, #4a90e2, #357abd);
+            color: white;
+            padding: 30px;
             border-radius: 15px;
             margin: 30px 0;
-            font-size: 1.6em;
+            text-align: center;
+        }
+        .preco-item {
+            font-size: 2em;
+            margin: 15px 0;
             font-weight: bold;
         }
-        .texto {
-            font-size: 1.2em;
-            margin: 25px 0;
-            opacity: 0.9;
+        p, li {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-family: 'Futura LT W01 Light', Arial, sans-serif;
         }
+        ul { padding-left: 30px; }
+        li { margin-bottom: 15px; }
         .whatsapp {
-            display: inline-block;
+            display: block;
+            width: 300px; margin: 40px auto 0;
             background: #25D366;
             color: white;
-            padding: 18px 40px;
+            padding: 20px 40px;
             text-decoration: none;
             border-radius: 50px;
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: bold;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(37,211,102,0.4);
             transition: all 0.3s;
         }
         .whatsapp:hover {
             background: #128C7E;
-            transform: translateY(-3px);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(37,211,102,0.5);
         }
         .rodape {
+            text-align: center;
+            font-size: 1.2em;
             margin-top: 40px;
-            font-size: 1.1em;
-            opacity: 0.8;
+            color: rgba(255,255,255,0.9);
         }
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 2.2em; }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            .foto-principal { width: 200px; height: 200px; }
+            p, li { font-size: 1.2em; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="logo.png" alt="Logo" class="logo">
-        <img src="foto.jpg" alt="Catarina Ferreira" class="foto">
+        <!-- Logo -->
+        <img src="logo.png" alt="Logo Catarina Ferreira" class="logo">
         
-        <h1>Catarina Ferreira</h1>
-        <p class="tagline">Nutricionista | 3350N</p>
+        <!-- Foto principal -->
+        <img src="foto.jpg" alt="Catarina Ferreira" class="foto-principal">
         
+        <div class="section">
+            <h1>Catarina Ferreira</h1>
+            <p style="font-size: 1.6em; text-align: center; color: #666; margin-bottom: 30px;">
+                Nutricionista | 3350N
+            </p>
+        </div>
+        
+        <!-- Preços -->
         <div class="precos">
-            🩺 <strong>1ª Consulta: 40€</strong><br>
-            🔄 <strong>Consultas seguintes: 30€</strong>
+            <div class="preco-item">🩺 1ª Consulta: <strong>40€</strong></div>
+            <div class="preco-item">🔄 Consultas seguintes: <strong>30€</strong></div>
         </div>
         
-        <div class="texto">
-            <p>Transforma a tua relação com a comida e conquista o teu melhor eu!</p>
-            <p>Consultas personalizadas de nutrição clínica para adultos e crianças.</p>
-            <p>Abordagem prática, sem dietas restritivas, focada em mudanças reais e sustentáveis.</p>
+        <div class="section">
+            <h2>Consultas Online</h2>
+            <p>As pesagens e medições/perímetros corporais são usados nas consultas presenciais (feitas por mim) e nas consultas online (feitas por vocês).</p>
+            
+            <h2>Gostaria de agendar uma consulta online... Do que vou precisar?</h2>
+            <ul>
+                <li>Acesso a computador (via <em>Zoom</em> ou <em>Google Meets</em>) ou telemóvel (via <em>WhatsApp</em>);</li>
+                <li>Acesso a balança para se pesarem (1 vez, no máximo 2 vezes, por mês) - não precisa de ser uma balança digital;</li>
+                <li>Fita métrica para que vos possa ensinar a fazer os perímetros corporais que costumo fazer presencialmente;</li>
+                <li>Balança para pesagem da comida nas primeiras 2 semanas e sempre que necessário (opcional, mas fortemente recomendado);</li>
+                <li>Formas de pagamento: MBWay, Transferência Bancária (mediante apresentação do comprovativo) ou PayPal.</li>
+            </ul>
+            
+            <a href="https://wa.me/351910827154?text=Olá%20Catarina,%20quero%20marcar%20consulta!" class="whatsapp">
+                📱 Marcar Consulta WhatsApp
+            </a>
         </div>
         
-        <a href="https://wa.me/351910827154?text=Olá%20Catarina,%20quero%20marcar%20uma%20consulta!" class="whatsapp">
-            📱 Marcar Consulta WhatsApp
-        </a>
-        
-        <div class="rodape">@nutri.catferreira</div>
+        <p class="rodape">@nutri.catferreira</p>
     </div>
 </body>
 </html>
