@@ -6,68 +6,109 @@
     <title>Catarina Ferreira - Nutricionista</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 20px;
             background: linear-gradient(135deg, #4a90e2, #357abd);
             color: white;
             text-align: center;
-            min-height: 100vh;
+            line-height: 1.6;
         }
-        img {
-            max-width: 250px;
-            border-radius: 15px;
-            margin: 10px;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        .foto {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            margin: 20px 0;
         }
         h1 {
-            font-size: 2.5em;
-            margin: 10px 0;
+            font-size: 2.8em;
+            margin: 0 0 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .tagline {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+            opacity: 0.95;
         }
         .precos {
-            background: rgba(255,255,255,0.2);
-            padding: 20px;
+            background: rgba(255,255,255,0.25);
+            padding: 25px;
             border-radius: 15px;
-            margin: 20px auto;
-            max-width: 400px;
-            font-size: 1.4em;
+            margin: 30px 0;
+            font-size: 1.6em;
             font-weight: bold;
+        }
+        .texto {
+            font-size: 1.2em;
+            margin: 25px 0;
+            opacity: 0.9;
         }
         .whatsapp {
             display: inline-block;
             background: #25D366;
             color: white;
-            padding: 15px 40px;
+            padding: 18px 40px;
             text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.4em;
-            margin: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+        }
+        .whatsapp:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
         }
         .rodape {
-            margin-top: 30px;
+            margin-top: 40px;
             font-size: 1.1em;
+            opacity: 0.8;
+        }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2.2em; }
         }
     </style>
 </head>
 <body>
-    <!-- Logo (faz upload como "logo.png") -->
-    <img src="logo.png" alt="Logo" style="width: 120px;">
-    
-    <!-- Foto pessoal -->
-    <img src="foto.jpg" alt="Catarina Ferreira">
-    
-    <h1>Catarina Ferreira</h1>
-    <p style="font-size: 1.3em; margin: 10px;">Nutricionista | 3350N</p>
-    
-    <div class="precos">
-        🩺 1ª Consulta: <strong>40€</strong><br>
-        🔄 Consultas seguintes: <strong>30€</strong>
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <img src="foto.jpg" alt="Catarina Ferreira" class="foto">
+        
+        <h1>Catarina Ferreira</h1>
+        <p class="tagline">Nutricionista | 3350N</p>
+        
+        <div class="precos">
+            🩺 <strong>1ª Consulta: 40€</strong><br>
+            🔄 <strong>Consultas seguintes: 30€</strong>
+        </div>
+        
+        <div class="texto">
+            <p>Transforma a tua relação com a comida e conquista o teu melhor eu!</p>
+            <p>Consultas personalizadas de nutrição clínica para adultos e crianças.</p>
+            <p>Abordagem prática, sem dietas restritivas, focada em mudanças reais e sustentáveis.</p>
+        </div>
+        
+        <a href="https://wa.me/351910827154?text=Olá%20Catarina,%20quero%20marcar%20uma%20consulta!" class="whatsapp">
+            📱 Marcar Consulta WhatsApp
+        </a>
+        
+        <div class="rodape">@nutri.catferreira</div>
     </div>
-    
-    <a href="https://wa.me/351910827154?text=Olá%20Catarina,%20quero%20marcar%20consulta!" class="whatsapp">
-        📱 Marcar Consulta
-    </a>
-    
-    <div class="rodape">@nutri.catferreira</div>
 </body>
 </html>
